@@ -3,7 +3,7 @@ require_relative 'app'
 Into.trait(
   author: 'Michael Fellinger',
   title: 'MoxonoM',
-  date: lambda{|now| now.strftime('%Y-%m-%d') },
+  date: lambda{|now| now.strftime('%a, %d. %b %Y') },
   disqus: false,
   ext: 'md',
   url: 'http://manveru.heroku.com'

@@ -9,6 +9,6 @@
   </section>
 
   <footer>
-    <span class="date">#{h @article[:date]}</span>
+    <time datetime="#{h @article.datetime}" pubdate>#{h @article.showtime}</time>
   </footer>
 </article>

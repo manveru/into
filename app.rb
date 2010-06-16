@@ -85,5 +85,13 @@ module Into
     def date
       Time.strptime(self[:date], '%Y-%m-%d')
     end
+
+    def datetime
+      date.strftime('%Y-%m-%d')
+    end
+
+    def showtime
+      Into.trait[:date][date]
+    end
   end
 end
