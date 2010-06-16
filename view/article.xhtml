@@ -1,0 +1,14 @@
+<article class="post">
+  <header>
+    <h1>#{a @article[:title], @article.href}</h1>
+    <h2>#{h @article[:description]}</h2>
+  </header>
+
+  <section class="content">
+    #{@article.to_html}
+  </section>
+
+  <footer>
+    <span class="date">#{h @article[:date]}</span>
+  </footer>
+</article>

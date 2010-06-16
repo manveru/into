@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Terminus, 'Droid Sans Mono', monospace;
+  background: #111;
+  color: #eee;
+}
+
+header {
+  text-align: center;
+  padding: 1em;
+}
+
+article {
+  max-width: 40em;
+  margin: auto;
+}
+
+article p {
+  padding: 0.5em;
+}
+
+footer {
+  padding: 1em;
+  text-align: center;
+}
+
+body > header > h1 > a {
+  white-space: pre;
+  text-decoration: none;
+}
+
+body > header > h1 {
+  font-size: 1.0em;
+}
+
+a { color: #fff; }
+a:visited { color: #eee; }

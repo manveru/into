@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>#{ Into.trait[:title] }</title>
+  <id>#{ Into.trait[:url] }</id>
+  <updated>#{ Into::Article.first.date.iso8601 }</updated>
+  <author>
+    <name>#{h Into.trait[:author] }</name>
+  </author>
+  <?r Into::Article.reverse_each.with_index do |article, index|
+    break if index == 10 ?>
+    <entry>
+      <title>#{ article[:title] }</title>
+      <link href="#{ article.url }" rel="alternate"/>
+      <id>#{ article.url }</id>
+      <published>#{ article.date.iso8601 }</published>
+      <updated>#{ article.date.iso8601 }</updated>
+      <author>
+        <name>#{h Into.trait[:author] }</name>
+      </author>
+      <summary type="html">
+        #{h article.summary }
+      </summary>
+      <content type="html">
+        #{h article.to_html }
+      </content>
+    </entry>
+  <?r end ?>
+</feed>
